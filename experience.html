@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Paisley Lifestyle</title>
+  <meta name="description" content="Connect with Paisley Lifestyle." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="mobile-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-mobile-toggle><span></span></button>
+      <div class="nav-shell" data-nav-shell>
+        <div class="nav-shell-inner">
+          <nav class="nav-group">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="experience.html">Experience</a>
+            <a class="nav-link" href="co-create.html">Co-Create</a>
+          </nav>
+          <nav class="nav-group right">
+            <a class="nav-link" href="story.html">The Story</a>
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <a class="brand-lockup" href="index.html"><span class="brand-mark"><img src="assets/mainlogo.pngholder.svg" alt="Paisley Lifestyle logo" /></span><span class="brand-type"><span class="top">Paisley</span><span class="bottom">Lifestyle</span></span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1 class="page-title maroon-gradient">Connect with Us</h1>
+        <p class="page-lead">We’d love to hear from you. Whether you’re looking to attend an experience, discuss a collaboration, or create something meaningful together, this is where the conversation begins.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="info-panel">
+          <p class="eyebrow">Contact Details</p>
+          <h2 class="section-title">Reach out beautifully.</h2>
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="label">Email</span>
+              <a href="mailto:paisleylifestyle.events@gmail.com">paisleylifestyle.events@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="label">Phone</span>
+              <a href="tel:6694996143">6694996143</a>
+            </div>
+            <div class="contact-item">
+              <span class="label">Instagram</span>
+              <a href="https://instagram.com/paisley.lifestyle" target="_blank" rel="noopener noreferrer">@paisley.lifestyle</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-panel">
+          <p class="eyebrow">Inquiry Form</p>
+          <h2 class="section-title">Begin the Conversation</h2>
+          <form name="paisley-contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="paisley-contact" />
+            <div class="form-grid">
+              <div class="field">
+                <label for="full-name">Full Name</label>
+                <input id="full-name" name="Full Name" type="text" required />
+              </div>
+              <div class="field">
+                <label for="email-address">Email Address</label>
+                <input id="email-address" name="Email Address" type="email" required />
+              </div>
+              <div class="field">
+                <label for="phone-number">Phone Number</label>
+                <input id="phone-number" name="Phone Number" type="tel" />
+              </div>
+              <div class="field">
+                <label for="inquiry-type">Inquiry Type</label>
+                <select id="inquiry-type" name="Inquiry Type">
+                  <option>Attend an Experience</option>
+                  <option>Curate a Private Experience</option>
+                  <option>Brand Collaboration</option>
+                  <option>Creative Collaboration</option>
+                  <option>General Inquiry</option>
+                </select>
+              </div>
+              <div class="field-full">
+                <label for="message">Message</label>
+                <textarea id="message" name="Message" required></textarea>
+              </div>
+            </div>
+            <div style="margin-top:22px;">
+              <button class="button" type="submit">Begin the Conversation</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>Paisley Lifestyle</div>
+      <div>Curated gatherings with warmth, beauty, and intention.</div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
