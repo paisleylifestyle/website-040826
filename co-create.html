@@ -3,67 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Co-Create — Paisley Lifestyle</title>
+  <title>Co-Create | Paisley Lifestyle</title>
   <meta name="description" content="Co-create with Paisley Lifestyle." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <button class="mobile-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-mobile-toggle><span></span></button>
+      <button class="mobile-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-mobile-toggle>
+        <span></span>
+      </button>
+
       <div class="nav-shell" data-nav-shell>
         <div class="nav-shell-inner">
-          <nav class="nav-group">
+          <nav class="nav-group left" aria-label="Primary left navigation">
             <a class="nav-link" href="index.html">Home</a>
             <a class="nav-link" href="experience.html">Experience</a>
             <a class="nav-link active" href="co-create.html">Co-Create</a>
           </nav>
-          <nav class="nav-group right">
+          <nav class="nav-group right" aria-label="Primary right navigation">
             <a class="nav-link" href="story.html">The Story</a>
             <a class="nav-link" href="contact.html">Contact</a>
           </nav>
         </div>
       </div>
-      <a class="brand-lockup" href="index.html"><span class="brand-mark"><img src="assets/mainlogo.pngaceholder.svg" alt="Paisley Lifestyle logo" /></span><span class="brand-type"><span class="top">Paisley</span><span class="bottom">Lifestyle</span></span></a>
+
+      <a class="header-brand" href="index.html" aria-label="Paisley Lifestyle home">
+        <img src="assets/mainlogo.png" alt="Paisley Lifestyle logo" onerror="this.onerror=null;this.src='assets/logo-placeholder.svg';" />
+        <div class="brand-mini-name">
+          <strong>Paisley</strong>
+          <span>Lifestyle</span>
+        </div>
+      </a>
     </div>
   </header>
 
-  <main>
+  <main class="page-main">
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">Collaborations</p>
         <h1 class="page-title maroon-gradient">Co-Create</h1>
-        <p class="page-lead">For brands, creatives, and collaborators who want to shape experiences that feel beautiful, immersive, and genuinely memorable.</p>
+        <p class="page-intro-copy">Thoughtfully designed collaborations for brands, creatives, and partners who value atmosphere, beauty, and meaningful interaction.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container dual-panels">
-        <div class="glass">
-          <p class="eyebrow">For Brands</p>
-          <h2 class="section-title">Be experienced, not simply seen.</h2>
-          <p>We create environments where brand presence feels integrated, elevated, and naturally discoverable. From product moments to experiential touchpoints, collaboration is approached with intention and aesthetic care.</p>
-        </div>
-        <div class="glass">
-          <p class="eyebrow">For Creatives</p>
-          <h2 class="section-title">A setting shaped by detail.</h2>
-          <p>We welcome photographers, designers, florists, artists, and experience-led collaborators whose work adds depth, atmosphere, and beauty to the environments we create.</p>
-        </div>
+      <div class="container co-grid">
+        <article class="co-panel">
+          <span class="eyebrow">For brands</span>
+          <h2>Be experienced, not simply seen.</h2>
+          <p>We integrate brands into intimate, highly considered settings where interaction feels natural, memorable, and aligned with a discerning audience.</p>
+        </article>
+
+        <article class="co-panel">
+          <span class="eyebrow">For creatives</span>
+          <h2>Create something beautiful together.</h2>
+          <p>From stylists and artists to photographers, hosts, and experience-led collaborators, we welcome partnerships that add depth, beauty, and intention.</p>
+        </article>
       </div>
     </section>
 
     <section class="section">
-      <div class="container editorial-grid">
-        <div class="image-placeholder soft"></div>
-        <div class="glass">
-          <p class="eyebrow">How We Work</p>
-          <h2 class="section-title">Thoughtful integration. Refined execution.</h2>
-          <p>Every collaboration is designed to feel aligned with the room, the audience, and the experience itself. We focus on atmosphere, guest sensibility, and editorial cohesion so the result feels elevated from the first impression to the final detail.</p>
-          <div style="margin-top:24px;"><a class="button" href="contact.html">Start a Collaboration</a></div>
+      <div class="container editorial-split">
+        <div class="editorial-copy">
+          <span class="eyebrow">Collaboration approach</span>
+          <h2 class="section-title">Designed with alignment in mind.</h2>
+          <p class="section-copy">Every collaboration is shaped around brand fit, audience resonance, and aesthetic integrity. The goal is not visibility for its own sake — it is presence that feels elevated, organic, and lasting.</p>
+          <div style="margin-top: 28px;">
+            <a class="button" href="contact.html">Start a Conversation</a>
+          </div>
         </div>
+
+        <div class="image-stage medium" data-label="Collaboration imagery"></div>
       </div>
     </section>
   </main>
@@ -71,9 +81,10 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>Paisley Lifestyle</div>
-      <div>Curated gatherings with warmth, beauty, and intention.</div>
+      <div>Editorial collaborations with warmth, beauty, and restraint.</div>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
