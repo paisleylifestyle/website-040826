@@ -11,7 +11,7 @@ Files included:
 - contact.html
 - styles.css
 - script.js
-- assets/logo-placeholder.svg
+- assets/mainlogo.pngo.pngaceholder.svg
 
 Netlify settings:
 - Build command: leave blank
