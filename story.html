@@ -1,8 +1,79 @@
-const toggle = document.querySelector('[data-mobile-toggle]');
-const navShell = document.querySelector('[data-nav-shell]');
-if (toggle && navShell) {
-  toggle.addEventListener('click', () => {
-    const open = navShell.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Story — Paisley Lifestyle</title>
+  <meta name="description" content="The story behind Paisley Lifestyle." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="mobile-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-mobile-toggle><span></span></button>
+      <div class="nav-shell" data-nav-shell>
+        <div class="nav-shell-inner">
+          <nav class="nav-group">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="experience.html">Experience</a>
+            <a class="nav-link" href="co-create.html">Co-Create</a>
+          </nav>
+          <nav class="nav-group right">
+            <a class="nav-link active" href="story.html">The Story</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <a class="brand-lockup" href="index.html"><span class="brand-mark"><img src="assets/logo-placeholder.svg" alt="Paisley Lifestyle logo" /></span><span class="brand-type"><span class="top">Paisley</span><span class="bottom">Lifestyle</span></span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">About</p>
+        <h1 class="page-title maroon-gradient">The Story</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container story-grid">
+        <div class="glass story-copy">
+          <p><strong>Paisley Lifestyle is inspired by the paisley motif — a symbol that has traveled across centuries, cultures, and forms of expression.</strong></p>
+          <p><strong>Its origins trace back over 2,000 years to ancient Persia, where a teardrop-shaped symbol known as boteh represented life, eternity, and renewal.</strong> The form echoed nature: a young cypress tree bent by the wind, a flame, or a seed in motion. It was not decorative excess — it was symbolic elegance.</p>
+          <p><strong>It later evolved in Kashmir through exquisite handwoven textiles, and eventually reached Europe, where it became known as paisley — a mark of refinement and cultivated taste.</strong></p>
+          <div class="divider"></div>
+          <p><strong>At Paisley Lifestyle, we draw from this philosophy.</strong></p>
+          <p><strong>We believe refinement should feel natural, not rigid.</strong><br><strong>And every detail should contribute to a deeper experience.</strong></p>
+        </div>
+        <div class="image-placeholder tall"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="glass story-copy">
+          <p class="eyebrow">What we do</p>
+          <h2 class="section-title">Designing spaces that feel beautiful, considered, and unforgettable.</h2>
+          <p><strong>We create curated gatherings designed to feel intentional, aesthetically refined, and socially effortless.</strong></p>
+          <p><strong>For our guests, this means spaces that invite connection — where atmosphere, conversation, and detail come together in a way that feels both elevated and at ease.</strong></p>
+          <p><strong>For brands, it is an opportunity to be experienced rather than simply seen — integrated into thoughtfully designed environments where interaction feels organic, memorable, and aligned with a discerning audience.</strong></p>
+          <p><strong>From intimate experiences to collaborative brand moments, everything we create is guided by the same principle:</strong></p>
+          <p><strong>to design spaces that feel beautiful, considered, and unforgettable.</strong></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>Paisley Lifestyle</div>
+      <div>Curated gatherings with warmth, beauty, and intention.</div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
