@@ -14,30 +14,27 @@
         <span></span>
       </button>
 
-      <nav class="nav-group left desktop-nav" aria-label="Primary left navigation">
-        <a class="nav-link " href="index.html">Home</a>
-        <a class="nav-link active" href="experience.html">Experience</a>
-        <a class="nav-link " href="co-create.html">Co-Create</a>
-      </nav>
+      <div class="nav-shell" data-nav-shell>
+        <div class="nav-shell-inner">
+          <nav class="nav-group left" aria-label="Primary left navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="experience.html">Experience</a>
+            <a class="nav-link" href="co-create.html">Co-Create</a>
+          </nav>
+          <nav class="nav-group right" aria-label="Primary right navigation">
+            <a class="nav-link" href="story.html">The Story</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
 
       <a class="header-brand" href="index.html" aria-label="Paisley Lifestyle home">
         <img src="assets/mainlogo.png" alt="Paisley Lifestyle logo" onerror="this.onerror=null;this.src='assets/logo-placeholder.svg';" />
-      </a>
-
-      <nav class="nav-group right desktop-nav" aria-label="Primary right navigation">
-        <a class="nav-link " href="story.html">The Story</a>
-        <a class="nav-link " href="contact.html">Contact</a>
-      </nav>
-
-      <div class="nav-shell" data-nav-shell>
-        <div class="nav-shell-inner">
-          <a class="nav-link " href="index.html">Home</a>
-          <a class="nav-link active" href="experience.html">Experience</a>
-          <a class="nav-link " href="co-create.html">Co-Create</a>
-          <a class="nav-link " href="story.html">The Story</a>
-          <a class="nav-link " href="contact.html">Contact</a>
+        <div class="brand-mini-name">
+          <strong>Paisley</strong>
+          <span>Lifestyle</span>
         </div>
-      </div>
+      </a>
     </div>
   </header>
 
@@ -48,27 +45,25 @@
       </div>
     </section>
 
-    <section class="section compact-top">
-      <div class="container editorial-split">
+    <section class="section">
+      <div class="container editorial-split intro-split compact-image-right">
         <div class="editorial-copy">
           <h2 class="section-title">Curated for atmosphere, connection, and ease.</h2>
           <p class="section-copy">Paisley gatherings are curated experiences — each setting is designed to feel intentional, aesthetically refined, and socially fluid.</p>
           <div class="divider-line"></div>
         </div>
-        <figure class="image-stage medium frame-image" data-label="Experience imagery">
-          <img src="assets/setupframe.png" alt="Paisley setup frame" onerror="this.style.display='none'" />
-        </figure>
+        <div class="editorial-image small-image">
+          <img src="assets/setupframe.png" alt="Paisley Lifestyle event setup" onerror="this.onerror=null;this.src='assets/logo-placeholder.svg';" />
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container asymmetric-split">
-        <figure class="image-stage medium contain-image offset-up" data-label="Atmosphere imagery">
-          <img src="assets/violinplay.png" alt="Atmospheric event imagery" onerror="this.style.display='none'" />
-        </figure>
-
+      <div class="container editorial-split image-left-split">
+        <div class="editorial-image smaller-image">
+          <img src="assets/violinplay.png" alt="Atmosphere at a Paisley Lifestyle experience" onerror="this.onerror=null;this.src='assets/logo-placeholder.svg';" />
+        </div>
         <div class="editorial-copy">
-          <span class="eyebrow">The feeling we design for</span>
           <h2 class="section-title">The feeling we design for</h2>
           <ul class="feeling-list">
             <li>Conversations beyond small talk</li>
@@ -90,7 +85,6 @@
           <article class="series-card">
             <div>
               <h3>The Soft Glam Edit</h3>
-              <div class="series-meta">Session One</div>
             </div>
             <p>An editorial-style beauty session focused on effortless refinement with a professional makeup artist.</p>
           </article>
@@ -98,7 +92,6 @@
           <article class="series-card">
             <div>
               <h3>The Confidence Walk</h3>
-              <div class="series-meta">Session Two</div>
             </div>
             <p>A guided experience in posture, movement, and physical presence with a runway &amp; presence coach.</p>
           </article>
@@ -106,7 +99,6 @@
           <article class="series-card">
             <div>
               <h3>Modern Etiquette</h3>
-              <div class="series-meta">Session Three</div>
             </div>
             <p>A contemporary take on social presence and communication with an etiquette expert.</p>
           </article>
@@ -132,9 +124,9 @@
           <a class="button" href="contact.html">Join the Guest List</a>
         </div>
 
-        <figure class="image-stage large" data-label="Event collage">
-          <img src="assets/galentinecollage.png" alt="Galentine's event collage" onerror="this.style.display='none'" />
-        </figure>
+        <div class="editorial-image collage-image">
+          <img src="assets/galentinecollage.png" alt="The Galentine's Edit event collage" onerror="this.onerror=null;this.src='assets/logo-placeholder.svg';" />
+        </div>
       </div>
     </section>
   </main>
