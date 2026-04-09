@@ -216,11 +216,11 @@ p { margin: 0 0 1rem; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 5vh 0 8vh;
+  padding: 2vh 0 8vh;
 }
 .hero-logo-blend {
   width: min(24vw, 220px);
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .hero-logo-blend img {
   width: 100%;
@@ -230,7 +230,7 @@ p { margin: 0 0 1rem; }
 .editorial-brand {
   margin: 0;
   line-height: .92;
-  transform: translateY(-12px);
+  transform: translateY(-34px);
 }
 .editorial-brand .line-one,
 .editorial-brand .line-two {
@@ -249,10 +249,18 @@ p { margin: 0 0 1rem; }
 }
 .hero-subcopy {
   max-width: 640px;
-  margin: 18px auto 0;
+  margin: 10px auto 0;
   color: rgba(246,238,229,.78);
-  font-size: 1rem;
+  font-size: .98rem;
   letter-spacing: .03em;
+}
+.hero-subcopy-highlight {
+  max-width: none;
+  font-size: .84rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: rgba(246,238,229,.74);
 }
 
 .home-fashion-intro {
@@ -276,13 +284,17 @@ p { margin: 0 0 1rem; }
 }
 .fashion-statement {
   margin-bottom: 18px;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.2rem, 4.2vw, 4rem);
-  line-height: .98;
-  color: var(--text);
+  color: var(--text-soft);
+}
+.same-style-copy {
+  max-width: 760px;
+  font-size: 1.03rem;
+  line-height: 1.72;
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--text-soft);
 }
 .fashion-support {
-  max-width: 680px;
+  max-width: 760px;
   color: var(--text-soft);
 }
 .fashion-links {
@@ -356,7 +368,7 @@ main.page-main { padding-bottom: 36px; }
 }
 .event-split-large {
   grid-template-columns: minmax(0, .84fr) minmax(360px, .96fr);
-  align-items: center;
+  align-items: start;
 }
 .co-grid-refined {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -382,6 +394,10 @@ main.page-main { padding-bottom: 36px; }
   margin: 0 0 12px;
   font-size: clamp(2.05rem, 4vw, 3.65rem);
   line-height: .98;
+}
+.section-title-small {
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  line-height: 1.08;
 }
 .section-copy,
 .flow-copy p,
@@ -430,14 +446,15 @@ main.page-main { padding-bottom: 36px; }
 }
 .collage-image-large {
   width: min(100%, 560px);
-  justify-self: center;
+  justify-self: start;
   aspect-ratio: 4 / 5;
 }
 .story-symbol-wrap {
-  justify-self: end;
+  justify-self: center;
   width: 100%;
-  max-width: 160px;
+  max-width: 136px;
   padding-top: 10px;
+  margin-right: 18px;
 }
 .story-symbol-image {
   aspect-ratio: 1 / 1;
@@ -728,7 +745,7 @@ textarea:focus {
     margin-bottom: 12px;
   }
   .editorial-brand {
-    transform: translateY(-4px);
+    transform: translateY(-12px);
   }
   .editorial-brand .line-one {
     font-size: clamp(3.4rem, 16vw, 5rem);
@@ -737,7 +754,11 @@ textarea:focus {
     font-size: clamp(1.8rem, 8vw, 2.55rem);
   }
   .hero-subcopy {
-    font-size: .95rem;
+    font-size: .92rem;
+  }
+  .hero-subcopy-highlight {
+    font-size: .72rem;
+    letter-spacing: .1em;
   }
   .home-fashion-intro,
   .section {
