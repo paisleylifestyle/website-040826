@@ -9,74 +9,65 @@
 </head>
 <body class="home-page">
   <header class="site-header">
-    <div class="container header-inner home-header-inner">
+    <div class="container header-bar">
+      <a class="header-logo-link" href="index.html" aria-label="Paisley Lifestyle home">
+        <img src="assets/mainlogo.png" alt="Paisley Lifestyle logo" onerror="this.onerror=null;this.src='assets/logo-placeholder.svg';" />
+      </a>
+
       <button class="mobile-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-mobile-toggle>
         <span></span>
       </button>
 
       <div class="nav-shell" data-nav-shell>
         <div class="nav-shell-inner">
-          <nav class="nav-group left" aria-label="Primary left navigation">
-            <a class="nav-link active" href="index.html">Home</a>
+          <nav class="nav-cluster nav-left" aria-label="Primary left navigation">
             <a class="nav-link" href="experience.html">Experience</a>
             <a class="nav-link" href="co-create.html">Co-Create</a>
           </nav>
 
-          <nav class="nav-group right" aria-label="Primary right navigation">
+          <nav class="nav-cluster nav-right" aria-label="Primary right navigation">
             <a class="nav-link" href="story.html">The Story</a>
             <a class="nav-link" href="contact.html">Contact</a>
           </nav>
         </div>
       </div>
-
-      <div class="header-spacer" aria-hidden="true"></div>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-content">
-        <div class="hero-logo-seamless">
+    <section class="hero hero-fashion">
+      <div class="container hero-fashion-inner">
+        <div class="hero-logo-blend">
           <img src="assets/mainlogo.png" alt="Paisley Lifestyle logo" onerror="this.onerror=null;this.src='assets/logo-placeholder.svg';" />
         </div>
 
-        <h1 class="hero-brand">
+        <h1 class="hero-brand editorial-brand">
           <span class="line-one gold-gradient">Paisley</span>
           <span class="line-two gold-gradient">Lifestyle</span>
         </h1>
+
+        <p class="hero-subcopy">Curated gatherings shaped by atmosphere, intimacy, and a quiet sense of refinement.</p>
       </div>
     </section>
 
-    <section class="home-editorial">
-      <div class="container home-editorial-grid">
-        <div class="home-editorial-copy">
-          <span class="eyebrow">A refined point of entry</span>
-          <h2 class="home-editorial-title">Curated gatherings with an intentional sense of beauty.</h2>
-          <p>Paisley Lifestyle creates experiences shaped by atmosphere, detail and social ease — spaces that feel warm, elevated and naturally memorable.</p>
-          <p>From intimate guest experiences to collaborative brand moments, each gathering is designed to feel considered rather than crowded, expressive rather than excessive.</p>
+    <section class="home-fashion-intro">
+      <div class="container fashion-grid">
+        <div class="fashion-intro-copy">
+          <p class="fashion-kicker">A luxury editorial approach to gathering.</p>
+          <p class="fashion-statement">Paisley Lifestyle creates considered experiences where beauty, conversation, and social ease meet with intention.</p>
+          <p class="fashion-support">From intimate guest experiences to collaborative brand moments, each gathering is designed to feel considered, expressive rather than excessive.</p>
         </div>
 
-        <div class="home-link-stack">
-          <article class="home-link-block">
-            <span class="home-link-label">Experience</span>
-            <h3>Attend an Experience</h3>
-            <p>Explore gatherings designed around connection, aesthetics and presence.</p>
-            <a class="inline-link" href="experience.html">Enter</a>
-          </article>
-
-          <article class="home-link-block">
-            <span class="home-link-label">The Story</span>
-            <h3>The meaning behind Paisley</h3>
-            <p>Discover the symbolism, history and philosophy that shapes the brand.</p>
-            <a class="inline-link" href="story.html">Read more</a>
-          </article>
-
-          <article class="home-link-block">
-            <span class="home-link-label">Connect</span>
-            <h3>Start the conversation</h3>
-            <p>For guest inquiries, collaborations and thoughtful ideas, connect with us directly.</p>
-            <a class="inline-link" href="contact.html">Connect</a>
-          </article>
+        <div class="fashion-links" aria-label="Explore Paisley Lifestyle">
+          <a class="fashion-link" href="experience.html">
+            <span>Attend an Experience</span>
+          </a>
+          <a class="fashion-link" href="story.html">
+            <span>Read The Story</span>
+          </a>
+          <a class="fashion-link" href="contact.html">
+            <span>Connect with Us</span>
+          </a>
         </div>
       </div>
     </section>
