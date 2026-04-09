@@ -4,62 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Experience | Paisley Lifestyle</title>
-  <meta name="description" content="Attend an experience with Paisley Lifestyle." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="page page-experience">
+
   <header class="site-header">
-    <div class="container header-bar">
-      <a class="header-logo-link" href="index.html" aria-label="Paisley Lifestyle home">
-        <img src="assets/mainlogo.png" alt="Paisley Lifestyle logo" onerror="this.onerror=null;this.src='assets/logo-placeholder.svg';" />
-      </a>
-
-      <button class="mobile-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-mobile-toggle>
-        <span></span>
-      </button>
-
-      <div class="nav-shell" data-nav-shell>
-        <div class="nav-shell-inner">
-          <nav class="nav-cluster nav-left" aria-label="Primary left navigation">
-            <a class="nav-link active" href="experience.html">Experience</a>
-            <a class="nav-link" href="co-create.html">Co-Create</a>
-          </nav>
-          <nav class="nav-cluster nav-right" aria-label="Primary right navigation">
-            <a class="nav-link" href="story.html">The Story</a>
-            <a class="nav-link" href="contact.html">Contact</a>
-          </nav>
-        </div>
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="header-logo-link" aria-label="Paisley Lifestyle Home">
+          <img src="assets/mainlogo.png" alt="Paisley Lifestyle logo" class="header-logo" />
+        </a>
+        <nav class="nav nav-left">
+          <a href="experience.html" class="active">Experience</a>
+          <a href="co-create.html">Co-Create</a>
+        </nav>
       </div>
+
+      <nav class="nav nav-right">
+        <a href="story.html">The Story</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main class="page-main">
-    <section class="page-hero page-hero-editorial">
-      <div class="container narrow-header-copy">
-        <h1 class="page-title maroon-gradient">Attend an Experience</h1>
+  <main class="experience-main">
+
+    <section class="page-hero editorial-shell">
+      <h1 class="page-title gradient-maroon">Attend an Experience</h1>
+    </section>
+
+    <section class="experience-section intro-section editorial-shell">
+      <div class="editorial-split editorial-split-tight intro-split">
+        <div class="editorial-copy">
+          <h2 class="section-kicker">Curated for atmosphere, connection, and ease.</h2>
+          <p class="lead-copy">
+            Paisley gatherings are curated experiences — each setting is designed to feel
+            intentional, aesthetically refined, and socially fluid.
+          </p>
+        </div>
+
+        <div class="editorial-image-wrap intro-image-wrap">
+          <img
+            src="assets/setupframe.JPG"
+            alt="Paisley event setup"
+            class="editorial-image intro-image"
+          />
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container editorial-split experience-intro-split">
-        <div class="editorial-copy tighter-copy">
-          <h2 class="section-title experience-highlight maroon-gradient">An expression of elegance and intention.</h2>
-          <p class="section-copy">Paisley gatherings are curated experiences — each setting is designed to feel intentional, aesthetically refined, and socially fluid.</p>
+    <section class="experience-section feeling-section editorial-shell">
+      <div class="editorial-split editorial-split-reverse editorial-split-tight">
+        <div class="editorial-image-wrap feeling-image-wrap">
+          <img
+            src="assets/violinplay.png"
+            alt="Atmosphere at a Paisley Lifestyle gathering"
+            class="editorial-image feeling-image"
+          />
         </div>
-        <div class="editorial-image image-plain image-small-right">
-          <img src="assets/setupframe.JPG" alt="Paisley Lifestyle event setup" />
-        </div>
-      </div>
-    </section>
 
-    <section class="section section-tight">
-      <div class="container editorial-split feeling-split">
-        <div class="editorial-image image-plain image-small-left">
-          <img src="assets/violinplay.png" alt="Atmosphere at a Paisley Lifestyle experience" onerror="this.onerror=null;this.src='assets/logo-placeholder.svg';" />
-        </div>
-        <div class="editorial-copy tighter-copy feeling-copy">
-          <h2 class="section-title">The feeling we design for</h2>
-          <ul class="feeling-list compact-list">
+        <div class="editorial-copy feeling-copy">
+          <h2 class="section-kicker gradient-maroon">The feeling we design for</h2>
+          <ul class="editorial-list">
             <li>Conversations beyond small talk</li>
             <li>Music that lands like a soft accent</li>
             <li>Details you notice… miss when they’re gone</li>
@@ -69,68 +81,70 @@
       </div>
     </section>
 
-    <section class="section section-tight">
-      <div class="container series-wrap">
-        <span class="eyebrow">Upcoming Series</span>
+    <section class="experience-section series-section editorial-shell">
+      <div class="section-heading-wrap">
+        <p class="section-label">Upcoming Series</p>
         <h2 class="section-title">The Art of Presence</h2>
-        <p class="series-intro">A three-part series exploring how a woman looks, carries herself, and moves through the world.</p>
+        <p class="section-intro">
+          A three-part series exploring how a woman looks, carries herself, and moves through the world.
+        </p>
+      </div>
 
-        <div class="series-block editorial-rows">
-          <article class="series-card">
-            <div>
-              <h3>The Soft Glam Edit</h3>
-            </div>
-            <p>An editorial-style beauty session focused on effortless refinement with a <strong>professional makeup artist</strong>.</p>
-          </article>
+      <div class="series-grid">
+        <article class="series-item">
+          <h3>The Soft Glam Edit</h3>
+          <p>
+            An editorial-style beauty session focused on effortless refinement
+            with a <strong>professional makeup artist</strong>.
+          </p>
+        </article>
 
-          <article class="series-card">
-            <div>
-              <h3>The Confidence Walk</h3>
-            </div>
-            <p>A guided experience in posture, movement, and physical presence with a <strong>pageant coach</strong>.</p>
-          </article>
+        <article class="series-item">
+          <h3>The Confidence Walk</h3>
+          <p>
+            A guided experience in posture, movement, and physical presence
+            with a <strong>pageant coach</strong>.
+          </p>
+        </article>
 
-          <article class="series-card">
-            <div>
-              <h3>Modern Etiquette</h3>
-            </div>
-            <p>A contemporary take on social presence and communication with an <strong>etiquette expert</strong>.</p>
-          </article>
-        </div>
+        <article class="series-item">
+          <h3>Modern Etiquette</h3>
+          <p>
+            A contemporary take on social presence and communication
+            with an <strong>etiquette expert</strong>.
+          </p>
+        </article>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container event-split event-split-large">
-        <div class="past-event-panel">
-          <span class="eyebrow">Past Event</span>
+    <section class="experience-section past-event-section editorial-shell">
+      <div class="editorial-split past-event-split">
+        <div class="editorial-copy past-event-copy">
+          <p class="section-label">Past Event</p>
           <h2 class="section-title">The Galentine’s Edit</h2>
-          <ul class="event-list">
+
+          <ul class="event-details-list">
             <li>✨ Create decoden-charm photo frames</li>
             <li>🧁 Enjoy themed bites, sweet treats &amp; sips</li>
             <li>📸 Mini photoshoots in our glam setup</li>
             <li>🌸 Relax, connect, and soak in the aesthetic</li>
           </ul>
-          <div class="event-meta">
-            <strong>Location shared with confirmed guests</strong>
-          </div>
-          <a class="button" href="contact.html">Join the Guest List</a>
+
+          <p class="event-location">Location shared with confirmed guests</p>
+
+          <a href="contact.html" class="editorial-button">Join the Guest List</a>
         </div>
 
-        <div class="editorial-image image-plain collage-image-large">
-          <img src="assets/galentinecollage.png" alt="The Galentine's Edit event collage" onerror="this.onerror=null;this.src='assets/logo-placeholder.svg';" />
+        <div class="editorial-image-wrap past-event-image-wrap">
+          <img
+            src="assets/galentinecollage.png"
+            alt="The Galentine’s Edit collage"
+            class="editorial-image past-event-image"
+          />
         </div>
       </div>
     </section>
+
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>Paisley Lifestyle</div>
-      <div>Curated experiences with an editorial sense of beauty.</div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
