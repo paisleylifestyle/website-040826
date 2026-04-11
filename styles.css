@@ -178,42 +178,50 @@ p { margin: 0 0 1rem; }
 .mobile-toggle span::after { top: 7px; }
 
 .hero {
-  background: var(--maroon);
+  background: var(--bg);
   color: #f6eee5;
   overflow: hidden;
 }
 .hero-fashion {
   min-height: calc(100vh - 108px);
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 0 56px;
 }
-.hero-fashion::before {
-  content: "";
-  position: absolute;
-  inset: auto auto -16vh -10vw;
-  width: 38vw;
-  height: 38vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,.06), transparent 70%);
-}
+.hero-fashion::before,
 .hero-fashion::after {
-  content: "";
-  position: absolute;
-  inset: 6vh 8vw auto auto;
-  width: 30vw;
-  height: 30vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,.04), transparent 70%);
+  content: none;
+}
+.hero-fashion-shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-fashion-frame {
+  border: 2px solid var(--maroon);
+  padding: clamp(18px, 2.2vw, 34px);
+}
+.hero-fashion-card {
+  width: min(calc(100vw - 160px), 1200px);
+  aspect-ratio: 2048 / 1365;
+  background-color: var(--maroon);
+  background-image: linear-gradient(rgba(81, 15, 13, 0.14), rgba(81, 15, 13, 0.14)), url("assets/heroimage.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero-fashion-inner {
   position: relative;
   z-index: 1;
-  min-height: calc(100vh - 108px);
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 0 6vh;
+  padding: 0 6%;
 }
 .hero-logo-blend {
   width: min(24vw, 210px);
@@ -776,12 +784,22 @@ textarea:focus {
 
 @media (max-width: 720px) {
   .container { width: min(calc(100% - 26px), var(--container)); }
-  .hero-fashion,
-  .hero-fashion-inner {
+  .hero-fashion {
     min-height: calc(100vh - 92px);
+    padding: 20px 0 30px;
+  }
+  .hero-fashion-shell {
+    width: 100%;
+  }
+  .hero-fashion-frame {
+    width: 100%;
+    padding: 14px;
+  }
+  .hero-fashion-card {
+    width: 100%;
   }
   .hero-fashion-inner {
-    padding: 0 0 7vh;
+    padding: 0 7%;
   }
   .hero-logo-blend {
     width: min(48vw, 170px);
@@ -957,26 +975,4 @@ textarea:focus {
   .image-caption {
     max-width: 220px;
   }
-}
-
-
-.hero-wrapper {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-frame {
-  padding: 40px;
-  border: 2px solid #510f0d;
-}
-
-.hero-card {
-  width: min(90vw, 2048px);
-  aspect-ratio: 2048 / 1365;
-  background: url('/heroimage.png') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
