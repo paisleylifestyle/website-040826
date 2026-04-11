@@ -1162,28 +1162,17 @@ textarea:focus {
 }
 
 .hero-luxe-frame {
-  width: min(100%, 1180px);
-  padding: 18px;
-  border: 1px solid rgba(81, 15, 13, 0.22);
-  background: linear-gradient(180deg, rgba(255,255,255,0.32), rgba(255,255,255,0.08));
-  box-shadow: 0 24px 60px rgba(53, 16, 14, 0.08);
-}
-
-.hero-luxe-frame::before {
-  content: "";
-  display: block;
-  position: absolute;
+  width: min(100%, 780px);
+  padding: 22px;
+  border: 1px solid rgba(81, 15, 13, 0.24);
+  background: transparent;
 }
 
 .hero-luxe-card {
   position: relative;
   width: 100%;
-  aspect-ratio: 1500 / 940;
-  min-height: min(76vh, 780px);
-  border: 1.5px solid rgba(203, 161, 74, 0.72);
-  box-shadow:
-    inset 0 0 0 8px rgba(255,255,255,0.08),
-    inset 0 0 0 18px rgba(81, 15, 13, 0.22);
+  aspect-ratio: 2048 / 1365;
+  min-height: 0;
   overflow: hidden;
   background-color: #4a1f24;
   background-image: url("assets/heroimage.png");
@@ -1196,9 +1185,7 @@ textarea:focus {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(74,31,36,0.05), rgba(74,31,36,0.08)),
-    radial-gradient(circle at 50% 18%, rgba(255,255,255,0.12), transparent 28%);
+  border: 1px solid rgba(81, 15, 13, 0.18);
   pointer-events: none;
 }
 
@@ -1209,15 +1196,12 @@ textarea:focus {
   }
 
   .hero-luxe-frame {
-    padding: 12px;
+    width: min(100%, 640px);
+    padding: 14px;
   }
 
   .hero-luxe-card {
-    min-height: 0;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 2048 / 1365;
     background-position: center top;
-    box-shadow:
-      inset 0 0 0 5px rgba(255,255,255,0.08),
-      inset 0 0 0 12px rgba(81, 15, 13, 0.2);
   }
 }
