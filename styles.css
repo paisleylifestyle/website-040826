@@ -991,7 +991,7 @@ textarea:focus {
 }
 
 .hero-luxe-frame {
-  width: min(100%, 780px);
+  width: min(100%, 600px);
   padding: 20px;
   border: 1.5px solid rgba(81, 15, 13, 0.72);
   background: transparent;
@@ -1021,26 +1021,26 @@ textarea:focus {
 
 .hero-decoration {
   position: absolute;
-  max-width: 150px;
+  max-width: 400px;
   z-index: 2;
 }
 
 .chandlier {
   top: 10%;
   left: -15%;
-  width: 120px;
+  width: 300px;
 }
 
 .happyfaces {
   bottom: -10%;
   left: 45%;
-  width: 100px;
+  width: 250px;
 }
 
 .floralrich {
   bottom: -15%;
   right: -10%;
-  width: 130px;
+  width: 320px;
 }
 
 @media (max-width: 900px) {
@@ -1051,7 +1051,7 @@ textarea:focus {
   }
 
   .hero-luxe-frame {
-    width: min(100%, 640px);
+    width: min(100%, 500px);
     padding: 14px;
   }
 
