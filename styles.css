@@ -1,3 +1,28 @@
+/* New hero collage styles */
+.hero-collage {
+  min-height: calc(100vh - 108px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--maroon);
+  padding: 0;
+}
+.hero-collage-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 0 0 0;
+}
+.hero-collage-img {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(53,16,14,0.10);
+  display: block;
+}
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
 
 :root {
@@ -182,31 +207,52 @@ p { margin: 0 0 1rem; }
   color: #f6eee5;
   overflow: hidden;
 }
-
-/* New hero collage styles */
-.hero-collage {
+.hero-fashion {
+  min-height: calc(100vh - 108px);
+  position: relative;
+}
+.hero-fashion::before {
+  content: "";
+  position: absolute;
+  inset: auto auto -16vh -10vw;
+  width: 38vw;
+  height: 38vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.06), transparent 70%);
+}
+.hero-fashion::after {
+  content: "";
+  position: absolute;
+  inset: 6vh 8vw auto auto;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.04), transparent 70%);
+}
+.hero-fashion-inner {
+  position: relative;
+  z-index: 1;
   min-height: calc(100vh - 108px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--maroon);
-  padding: 0;
+  text-align: center;
+  padding: 0 0 6vh;
 }
-.hero-collage-inner {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4vh 0 0 0;
+.hero-logo-blend {
+  width: min(24vw, 210px);
+  margin-bottom: 4px;
 }
-.hero-collage-img {
+.hero-logo-blend img {
   width: 100%;
   height: auto;
-  border-radius: 1.5rem;
-  box-shadow: 0 8px 32px rgba(53,16,14,0.10);
-  display: block;
+  object-fit: contain;
+}
+.editorial-brand {
+  margin: 0;
+  line-height: .94;
+  transform: translateY(-48px);
 }
 .editorial-brand .line-one,
 .editorial-brand .line-two {
@@ -755,11 +801,28 @@ textarea:focus {
 
 @media (max-width: 720px) {
   .container { width: min(calc(100% - 26px), var(--container)); }
-  .hero-collage {
+  .hero-fashion,
+  .hero-fashion-inner {
     min-height: calc(100vh - 92px);
   }
-  .hero-collage-inner {
+  .hero-fashion-inner {
     padding: 0 0 7vh;
+  }
+  .hero-logo-blend {
+    width: min(48vw, 170px);
+    margin-bottom: 12px;
+  }
+  .editorial-brand {
+    transform: translateY(-18px);
+  }
+  .editorial-brand .line-one {
+    font-size: clamp(3.4rem, 16vw, 5rem);
+  }
+  .editorial-brand .line-two {
+    font-size: clamp(1.8rem, 8vw, 2.55rem);
+  }
+  .hero-subcopy {
+    font-size: .92rem;
   }
    .hero-subcopy-highlight {
     font-size: .72rem;
