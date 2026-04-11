@@ -995,6 +995,7 @@ textarea:focus {
   padding: 20px;
   border: 1.5px solid rgba(81, 15, 13, 0.72);
   background: transparent;
+  position: relative;
 }
 
 .hero-luxe-card {
@@ -1018,6 +1019,30 @@ textarea:focus {
   content: none !important;
 }
 
+.hero-decoration {
+  position: absolute;
+  max-width: 150px;
+  z-index: 2;
+}
+
+.chandlier {
+  top: 10%;
+  left: -15%;
+  width: 120px;
+}
+
+.happyfaces {
+  bottom: -10%;
+  left: 45%;
+  width: 100px;
+}
+
+.floralrich {
+  bottom: -15%;
+  right: -10%;
+  width: 130px;
+}
+
 @media (max-width: 900px) {
   .hero-fashion,
   .hero-societe-inspired {
@@ -1033,6 +1058,10 @@ textarea:focus {
   .hero-luxe-card {
     aspect-ratio: 2048 / 1365;
     background-position: center top;
+  }
+
+  .hero-decoration {
+    display: none;
   }
 }
 
