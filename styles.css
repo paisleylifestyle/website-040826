@@ -185,96 +185,118 @@ p { margin: 0 0 1rem; }
 .hero-fashion {
   min-height: calc(100vh - 108px);
   position: relative;
+}
+.hero-fashion::before {
+  content: "";
+  position: absolute;
+  inset: auto auto -16vh -10vw;
+  width: 38vw;
+  height: 38vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.06), transparent 70%);
+}
+.hero-fashion::after {
+  content: "";
+  position: absolute;
+  inset: 6vh 8vw auto auto;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.04), transparent 70%);
+}
+.hero-fashion-inner {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 108px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(28px, 4vw, 54px) 0 clamp(46px, 6vw, 84px);
+  padding: 5vh 0 6vh;
 }
 
-.hero-collage-section::before,
-.hero-collage-section::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
+.hero-collage-section {
+  isolation: isolate;
 }
 
-.hero-collage-section::before {
-  inset: auto auto -12vw -10vw;
-  width: 34vw;
-  height: 34vw;
-  background: radial-gradient(circle, rgba(255,255,255,.05), transparent 70%);
+.hero-collage-inner {
+  width: 100%;
 }
 
-.hero-collage-section::after {
-  inset: 3vw 6vw auto auto;
-  width: 24vw;
-  height: 24vw;
-  background: radial-gradient(circle, rgba(255,255,255,.04), transparent 72%);
-}
-
-.hero-collage-shell {
+.hero-collage {
   position: relative;
-  z-index: 1;
-  width: min(100%, 1680px);
-  min-height: min(calc(100vh - 180px), 880px);
-  height: clamp(560px, calc(100vh - 170px), 860px);
+  width: min(100%, 1200px);
+  aspect-ratio: 16 / 9;
   margin: 0 auto;
 }
 
-.hero-collage-image,
-.hero-collage-card {
+.collage-piece {
   position: absolute;
   margin: 0;
+  overflow: hidden;
 }
 
-.hero-collage-image img,
-.hero-collage-card img {
+.collage-piece img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
+  object-fit: cover;
 }
 
-.hero-collage-left {
-  left: 0;
-  top: 10%;
-  width: min(33.5vw, 470px);
-  height: min(64vh, 690px);
+.collage-left {
+  left: -19.9%;
+  top: 15.7%;
+  width: 65.7%;
+  height: 77.8%;
   z-index: 1;
 }
 
-.hero-collage-right {
+.collage-center {
+  left: 23.5%;
+  top: 12.2%;
+  width: 50.2%;
+  height: 59.5%;
+  z-index: 3;
+}
+
+.collage-center img {
+  object-fit: cover;
+}
+
+.collage-right {
   right: 0;
   top: 0;
-  width: min(31vw, 440px);
-  height: min(78vh, 860px);
-  z-index: 1;
-}
-
-.hero-collage-bottom {
-  left: 46.5%;
-  bottom: 0;
-  transform: translateX(-10%);
-  width: min(36vw, 610px);
-  height: min(30vh, 250px);
+  width: 37.1%;
+  height: 99.8%;
   z-index: 2;
 }
 
-.hero-collage-card {
-  left: 50%;
-  top: 49%;
-  transform: translate(-50%, -50%);
-  width: min(51vw, 860px);
-  aspect-ratio: 851 / 574;
+.collage-bottom {
+  left: 45.8%;
+  top: 68.0%;
+  width: 35.6%;
+  height: 42.2%;
   z-index: 4;
 }
 
 .hero-logo-blend,
-.editorial-brand,
-.hero-subcopy,
-.hero-subcopy-highlight {
+.editorial-brand {
   display: none;
+}
+
+.hero-subcopy {
+  max-width: 640px;
+  margin: 10px auto 0;
+  color: rgba(246,238,229,.78);
+  font-size: .98rem;
+  letter-spacing: .03em;
+}
+.hero-subcopy-highlight {
+  max-width: none;
+  font-size: .84rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: rgba(246,238,229,.74);
 }
 
 .home-fashion-intro {
@@ -793,46 +815,32 @@ textarea:focus {
 
 @media (max-width: 720px) {
   .container { width: min(calc(100% - 26px), var(--container)); }
-  .hero-fashion {
-    min-height: auto;
-    padding: 18px 0 28px;
+  .hero-fashion,
+  .hero-fashion-inner {
+    min-height: calc(100vh - 92px);
   }
-  .hero-collage-shell {
-    width: 100%;
-    min-height: auto;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 10px 0 0;
+  .hero-fashion-inner {
+    padding: 0 0 7vh;
   }
-  .hero-collage-image,
-  .hero-collage-card {
-    position: relative;
-    inset: auto;
-    left: auto;
-    right: auto;
-    top: auto;
-    bottom: auto;
-    transform: none;
-    width: 100%;
-    height: auto;
+  .hero-logo-blend {
+    width: min(48vw, 170px);
+    margin-bottom: 12px;
   }
-  .hero-collage-card {
-    order: 1;
-    max-width: 100%;
+  .editorial-brand {
+    transform: translateY(-18px);
   }
-  .hero-collage-left {
-    order: 2;
-    aspect-ratio: 4 / 5;
+  .editorial-brand .line-one {
+    font-size: clamp(3.4rem, 16vw, 5rem);
   }
-  .hero-collage-right {
-    order: 3;
-    aspect-ratio: 4 / 5;
+  .editorial-brand .line-two {
+    font-size: clamp(1.8rem, 8vw, 2.55rem);
   }
-  .hero-collage-bottom {
-    order: 4;
-    aspect-ratio: 16 / 9;
+  .hero-subcopy {
+    font-size: .92rem;
+  }
+   .hero-subcopy-highlight {
+    font-size: .72rem;
+    letter-spacing: .1em;
   }
   .home-fashion-intro,
   .section {
@@ -990,31 +998,80 @@ textarea:focus {
   }
 }
 
-
-@media (max-width: 1180px) {
-  .hero-collage-shell {
-    height: clamp(500px, calc(100vh - 150px), 760px);
+@media (max-width: 900px) {
+  .hero-collage {
+    width: min(100%, 720px);
+    aspect-ratio: 0.82;
   }
 
-  .hero-collage-left {
-    width: 33%;
-    height: 62%;
-    top: 12%;
+  .collage-left {
+    left: -8%;
+    top: 18%;
+    width: 63%;
+    height: 48%;
   }
 
-  .hero-collage-right {
-    width: 30%;
-    height: 74%;
+  .collage-center {
+    left: 15%;
+    top: 10%;
+    width: 66%;
+    height: 38%;
   }
 
-  .hero-collage-card {
-    width: 52%;
+  .collage-right {
+    right: -2%;
+    top: 1%;
+    width: 39%;
+    height: 70%;
   }
 
-  .hero-collage-bottom {
-    width: 38%;
-    height: 26%;
-    left: 48%;
-    transform: translateX(-16%);
+  .collage-bottom {
+    left: 31%;
+    top: 54%;
+    width: 58%;
+    height: 28%;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(calc(100% - 32px), var(--container));
+  }
+
+  .hero-fashion,
+  .hero-fashion-inner {
+    min-height: calc(100svh - 88px);
+  }
+
+  .hero-collage {
+    aspect-ratio: 0.8;
+  }
+
+  .collage-left {
+    left: -16%;
+    top: 20%;
+    width: 78%;
+    height: 44%;
+  }
+
+  .collage-center {
+    left: 10%;
+    top: 10%;
+    width: 74%;
+    height: 32%;
+  }
+
+  .collage-right {
+    right: -6%;
+    top: 2%;
+    width: 45%;
+    height: 63%;
+  }
+
+  .collage-bottom {
+    left: 20%;
+    top: 52%;
+    width: 72%;
+    height: 24%;
   }
 }
