@@ -1301,3 +1301,18 @@ body { margin: 0; }
     margin-left: -16vw;
   }
 }
+
+
+/* --- HERO FIX: show more bottom content --- */
+.hero {
+  min-height: 115vh;
+}
+
+.hero img {
+  object-fit: cover;
+  object-position: center 65%;
+}
+
+.hero-bottom {
+  object-position: center 75%;
+}
