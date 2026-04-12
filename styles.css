@@ -220,10 +220,10 @@ p { margin: 0 0 1rem; }
   width: auto;
   margin-bottom: 4px;
 }
-.hero-logo-blend img {
-  width: 80px !important;
-  height: auto !important;
-  object-fit: contain !important;
+  .hero-logo-blend img {
+    width: 40px !important;
+    height: auto !important;
+    object-fit: contain !important;
 }
 .editorial-brand {
   margin: 0;
