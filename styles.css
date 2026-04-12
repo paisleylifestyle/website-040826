@@ -218,7 +218,7 @@ p { margin: 0 0 1rem; }
   padding: 0 0 6vh;
 }
 .hero-logo-blend {
-  width: min(24vw, 210px);
+  width: auto;
   margin-bottom: 4px;
 }
 .hero-logo-blend img {
