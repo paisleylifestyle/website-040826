@@ -221,8 +221,7 @@ p { margin: 0 0 1rem; }
   width: auto;
   margin-bottom: 4px;
 }
-.hero-logo-blend img {
-  width: 100%;
+  width: 35%;
   height: auto;
   object-fit: contain;
 }
