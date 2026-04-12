@@ -1,21 +1,4 @@
-/* Hero image center styling */
-.hero-image-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50vh;
-}
 
-.hero-image {
-  max-width: 50vw;
-  max-height: 50vh;
-  width: auto;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  margin: 0 auto;
-}
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
 
