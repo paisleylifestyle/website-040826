@@ -182,71 +182,99 @@ p { margin: 0 0 1rem; }
   color: #f6eee5;
   overflow: hidden;
 }
-.hero-collage {
+.hero-fashion {
   min-height: calc(100vh - 108px);
   position: relative;
-  display: flex;
-  align-items: center;
-}
-.hero-collage-inner {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  min-height: calc(100vh - 108px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(32px, 5vw, 68px) 0;
+  padding: clamp(28px, 4vw, 54px) 0 clamp(46px, 6vw, 84px);
 }
-.hero-collage-stage {
+
+.hero-collage-section::before,
+.hero-collage-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-collage-section::before {
+  inset: auto auto -12vw -10vw;
+  width: 34vw;
+  height: 34vw;
+  background: radial-gradient(circle, rgba(255,255,255,.05), transparent 70%);
+}
+
+.hero-collage-section::after {
+  inset: 3vw 6vw auto auto;
+  width: 24vw;
+  height: 24vw;
+  background: radial-gradient(circle, rgba(255,255,255,.04), transparent 72%);
+}
+
+.hero-collage-shell {
   position: relative;
-  width: min(100%, 1400px);
-  aspect-ratio: 1.78 / 1;
-  min-height: 540px;
+  z-index: 1;
+  width: min(100%, 1680px);
+  min-height: min(calc(100vh - 180px), 880px);
+  height: clamp(560px, calc(100vh - 170px), 860px);
+  margin: 0 auto;
 }
-.hero-piece {
+
+.hero-collage-image,
+.hero-collage-card {
   position: absolute;
   margin: 0;
-  overflow: hidden;
 }
-.hero-piece img {
+
+.hero-collage-image img,
+.hero-collage-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-.hero-piece-left {
+
+.hero-collage-left {
   left: 0;
-  top: 14%;
-  width: 31.5%;
-  height: 71%;
+  top: 10%;
+  width: min(33.5vw, 470px);
+  height: min(64vh, 690px);
   z-index: 1;
 }
-.hero-piece-right {
+
+.hero-collage-right {
   right: 0;
   top: 0;
-  width: 31.5%;
-  height: 100%;
+  width: min(31vw, 440px);
+  height: min(78vh, 860px);
   z-index: 1;
 }
-.hero-piece-bottom {
-  left: 56.2%;
+
+.hero-collage-bottom {
+  left: 46.5%;
   bottom: 0;
-  width: 45.4%;
-  height: 31.6%;
-  transform: translateX(-50%);
+  transform: translateX(-10%);
+  width: min(36vw, 610px);
+  height: min(30vh, 250px);
   z-index: 2;
 }
-.hero-piece-center {
+
+.hero-collage-card {
   left: 50%;
-  top: 7.9%;
-  width: 51.3%;
-  height: 69.7%;
-  transform: translateX(-50%);
-  z-index: 3;
+  top: 49%;
+  transform: translate(-50%, -50%);
+  width: min(51vw, 860px);
+  aspect-ratio: 851 / 574;
+  z-index: 4;
 }
-.hero-piece-center img {
-  object-fit: contain;
+
+.hero-logo-blend,
+.editorial-brand,
+.hero-subcopy,
+.hero-subcopy-highlight {
+  display: none;
 }
 
 .home-fashion-intro {
@@ -765,32 +793,46 @@ textarea:focus {
 
 @media (max-width: 720px) {
   .container { width: min(calc(100% - 26px), var(--container)); }
-  .hero-fashion,
-  .hero-fashion-inner {
-    min-height: calc(100vh - 92px);
+  .hero-fashion {
+    min-height: auto;
+    padding: 18px 0 28px;
   }
-  .hero-fashion-inner {
-    padding: 0 0 7vh;
+  .hero-collage-shell {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 10px 0 0;
   }
-  .hero-logo-blend {
-    width: min(48vw, 170px);
-    margin-bottom: 12px;
+  .hero-collage-image,
+  .hero-collage-card {
+    position: relative;
+    inset: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    transform: none;
+    width: 100%;
+    height: auto;
   }
-  .editorial-brand {
-    transform: translateY(-18px);
+  .hero-collage-card {
+    order: 1;
+    max-width: 100%;
   }
-  .editorial-brand .line-one {
-    font-size: clamp(3.4rem, 16vw, 5rem);
+  .hero-collage-left {
+    order: 2;
+    aspect-ratio: 4 / 5;
   }
-  .editorial-brand .line-two {
-    font-size: clamp(1.8rem, 8vw, 2.55rem);
+  .hero-collage-right {
+    order: 3;
+    aspect-ratio: 4 / 5;
   }
-  .hero-subcopy {
-    font-size: .92rem;
-  }
-   .hero-subcopy-highlight {
-    font-size: .72rem;
-    letter-spacing: .1em;
+  .hero-collage-bottom {
+    order: 4;
+    aspect-ratio: 16 / 9;
   }
   .home-fashion-intro,
   .section {
@@ -949,45 +991,30 @@ textarea:focus {
 }
 
 
-@media (max-width: 980px) {
-  .container {
-    width: min(calc(100% - 40px), var(--container));
+@media (max-width: 1180px) {
+  .hero-collage-shell {
+    height: clamp(500px, calc(100vh - 150px), 760px);
   }
 
-  .hero-collage-inner {
-    min-height: auto;
-    padding: 30px 0 42px;
+  .hero-collage-left {
+    width: 33%;
+    height: 62%;
+    top: 12%;
   }
 
-  .hero-collage-stage {
-    aspect-ratio: auto;
-    min-height: 0;
-    display: grid;
-    gap: 14px;
+  .hero-collage-right {
+    width: 30%;
+    height: 74%;
   }
 
-  .hero-piece {
-    position: relative;
-    inset: auto;
-    transform: none;
-    width: 100%;
-    height: auto;
+  .hero-collage-card {
+    width: 52%;
   }
 
-  .hero-piece-center {
-    order: 1;
-  }
-
-  .hero-piece-left,
-  .hero-piece-right {
-    order: 2;
-  }
-
-  .hero-piece-bottom {
-    order: 3;
-  }
-
-  .hero-piece-center img {
-    object-fit: cover;
+  .hero-collage-bottom {
+    width: 38%;
+    height: 26%;
+    left: 48%;
+    transform: translateX(-16%);
   }
 }
