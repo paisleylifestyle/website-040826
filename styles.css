@@ -1,28 +1,3 @@
-/* New hero collage styles */
-.hero-collage {
-  min-height: calc(100vh - 108px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--maroon);
-  padding: 0;
-}
-.hero-collage-inner {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4vh 0 0 0;
-}
-.hero-collage-img {
-  width: 100%;
-  height: auto;
-  border-radius: 1.5rem;
-  box-shadow: 0 8px 32px rgba(53,16,14,0.10);
-  display: block;
-}
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
 
 :root {
@@ -982,4 +957,168 @@ textarea:focus {
   .image-caption {
     max-width: 220px;
   }
+}
+
+
+/* homepage hero remake */
+.hero-collage {
+  background: linear-gradient(180deg, #4f1412 0%, #541411 42%, #591915 100%);
+  color: #f6eee5;
+  padding: 54px 0 72px;
+}
+
+.hero-collage-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 410px) minmax(0, 1fr);
+  gap: 52px;
+  align-items: center;
+  min-height: calc(100vh - 180px);
+}
+
+.hero-copy {
+  max-width: 380px;
+  padding-top: 12px;
+}
+
+.hero-kicker {
+  margin: 0 0 16px;
+  color: rgba(252, 225, 144, .88);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: .74rem;
+}
+
+.hero-title {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3.6rem, 7.1vw, 6.4rem);
+  line-height: .92;
+  font-weight: 600;
+  color: #f7eddc;
+}
+
+.hero-description {
+  margin: 18px 0 0;
+  max-width: 320px;
+  color: rgba(246, 238, 229, .78);
+  font-size: 1rem;
+}
+
+.hero-mosaic {
+  width: min(100%, 860px);
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: 220px minmax(280px, 1fr) 220px;
+  grid-template-areas:
+    "left center right"
+    ". bottom .";
+  gap: 22px;
+  align-items: start;
+}
+
+.mosaic-card {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 22px;
+  background: rgba(255,255,255,.08);
+  box-shadow: 0 24px 60px rgba(15, 6, 6, .24);
+}
+
+.mosaic-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.mosaic-left,
+.mosaic-right {
+  height: 330px;
+}
+
+.mosaic-center {
+  height: 510px;
+}
+
+.mosaic-bottom {
+  grid-area: bottom;
+  width: min(100%, 420px);
+  justify-self: center;
+  height: 176px;
+}
+
+.mosaic-left { grid-area: left; margin-top: 72px; }
+.mosaic-center { grid-area: center; }
+.mosaic-right { grid-area: right; margin-top: 72px; }
+
+@media (max-width: 1100px) {
+  .hero-collage-inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    min-height: auto;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero-description {
+    max-width: 560px;
+  }
+
+  .hero-mosaic {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-collage {
+    padding: 34px 0 54px;
+  }
+
+  .hero-mosaic {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "center center"
+      "left right"
+      "bottom bottom";
+    gap: 16px;
+  }
+
+  .mosaic-center,
+  .mosaic-left,
+  .mosaic-right,
+  .mosaic-bottom {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .mosaic-center { height: 430px; }
+  .mosaic-left,
+  .mosaic-right { height: 280px; }
+  .mosaic-bottom { height: 190px; }
+}
+
+@media (max-width: 560px) {
+  .hero-title {
+    font-size: clamp(2.7rem, 14vw, 4.2rem);
+  }
+
+  .hero-description {
+    font-size: .94rem;
+  }
+
+  .hero-mosaic {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "center"
+      "left"
+      "right"
+      "bottom";
+  }
+
+  .mosaic-center { height: 360px; }
+  .mosaic-left,
+  .mosaic-right { height: 240px; }
+  .mosaic-bottom { height: 170px; }
 }
