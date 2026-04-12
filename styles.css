@@ -1135,3 +1135,64 @@ body { margin: 0; }
   .hero-left, .hero-right { width: 40vw; }
   .hero-bottom { width: 60vw; }
 }
+
+
+/* === PIXEL-LIKE CANVA COLLAGE === */
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-collage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* CENTER dominant */
+.hero-center {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  width: 46vw;
+  z-index: 5;
+}
+
+/* LEFT slightly behind */
+.hero-left {
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  width: 28vw;
+  z-index: 2;
+}
+
+/* RIGHT slightly higher */
+.hero-right {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  width: 28vw;
+  z-index: 2;
+}
+
+/* BOTTOM overlapping */
+.hero-bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  width: 34vw;
+  z-index: 4;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .hero-center { width: 75vw; top: 50%; }
+  .hero-left { width: 45vw; top: 35%; }
+  .hero-right { width: 45vw; top: 25%; }
+  .hero-bottom { width: 65vw; }
+}
