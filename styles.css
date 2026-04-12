@@ -217,15 +217,13 @@ p { margin: 0 0 1rem; }
   text-align: center;
   padding: 0 0 6vh;
 }
-.hero-logo-blend {
   width: auto;
   margin-bottom: 4px;
 }
-}
 .hero-logo-blend img {
-  width: 80px;
-  height: auto;
-  object-fit: contain;
+  width: 80px !important;
+  height: auto !important;
+  object-fit: contain !important;
 }
 .editorial-brand {
   margin: 0;
