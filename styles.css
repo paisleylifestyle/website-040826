@@ -223,7 +223,7 @@ p { margin: 0 0 1rem; }
 }
 }
 .hero-logo-blend img {
-  width: 5%;
+  width: auto;
   height: auto;
   object-fit: contain;
 }
